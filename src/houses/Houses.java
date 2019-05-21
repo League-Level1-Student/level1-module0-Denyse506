@@ -4,6 +4,8 @@ import org.jointheleague.graphical.robot.Robot;
 
 public class Houses {
 
+	private static final Robot Robot = null;
+
 	public static void main(String[] args) {
 		Robot r2d2 = new Robot();
 		r2d2.miniaturize();
@@ -28,16 +30,21 @@ public class Houses {
 		
 		if("medium".equals(h)){
 			Height=120;
-		
+		 
 		}else if ("large".equals(h)) {
 			Height=250;
 				}
-
+  
 		r.setPenColor(color, color, color);
 		r.move(Height);
-		r.turn(90);
-		r.move(20);
-		r.turn(90);	
+if("medium".equals(h)) {
+	drawPointyRoof(r);
+}else if("".contentEquals(h)) {
+	drawPointyRoof(r);
+}
+else if ("large".equals(h)) {
+	drawFlatRoof(r);
+}
 		r.move(Height);
 		r.setPenColor(0, 255, 0);
 		r.turn(-90);
@@ -46,7 +53,7 @@ public class Houses {
 
 }
 
-	void drawPointyRoof(Robot r2) {
+	static void drawPointyRoof(Robot r2) {
 		r2.turn(45);
 		r2.move(25);
 		r2.turn(90);
@@ -54,7 +61,7 @@ public class Houses {
 		r2.turn(45);
 	}
 
-	void drawFlatRoof(Robot r1) {
+	static void drawFlatRoof(Robot r1) {
 	    r1.turn(90);
 		r1.move(20);
 		r1.turn(90);	
