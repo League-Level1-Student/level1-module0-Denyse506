@@ -26,7 +26,7 @@ public class PhotoQuiz {
 		// 1. find an image on the internet, and put its URL in a String
 		// variable (from your browser, right click on the image, and select
 		// â€œCopy Image Addressâ€�)
- String Kitten="https://www.warrenphotographic.co.uk/34243-ginger-kittens";
+ String Kitten="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80";
 		// 2. create a variable of type "Component" that will hold your image
 Component name=createImage(Kitten);
 		// 3. use the "createImage()" method below to initialize your Component
@@ -38,27 +38,37 @@ quizWindow.pack();
 		// 6. ask a question that relates to the image
 String Question=JOptionPane.showInputDialog("What color is the kitten");
 		// 7. print "CORRECT" if the user gave the right answer
-if(Question=="orange") {
-	System.out.println();
+if(Question.equals("Orange")) {
+	System.out.println("Correct");
+	System.out.println(name);
+}else {
+	System.out.println("Incorrect");
 }
 		// 8. print "INCORRECT" if the answer is wrong
 
 		// 9. remove the component from the quiz window (you may not see the
 		// effect of this until step 12)
-
+quizWindow.remove(name);
 		// 10. find another image and create it (might take more than one line
 		// of code)
 
 		// 11. add the second image to the quiz window
-
+String bunny="http://cdn.24.co.za/files/Cms/General/d/3773/2b17ff1846f34f629db4e7d0174d4652.jpg";
+Component image= createImage(bunny);
+quizWindow.add(image);
 		// 12. pack the quiz window
-
+quizWindow.pack();
 		// 13. ask another question
+String Question2=JOptionPane.showInputDialog("what is the bunny favorite food");
+	
+if(Question2.equals("Carrot")) {
+	System.out.println("Correct");
+	System.out.println(image);
+}else {
+	System.out.print("Incorrect");
 
-		// 14+ check answer, say if correct or incorrect, etc.
-
+}
 	}
-
 	private Component createImage(String imageUrl) throws MalformedURLException {
 		URL url = new URL(imageUrl);
 		Icon icon = new ImageIcon(url);

@@ -1,4 +1,4 @@
-package body_part_quiz;
+https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80package body_part_quiz;
 
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2019
@@ -51,9 +51,9 @@ public class BodyPartQuiz {
 	private void startQuiz() {
 
 		// 1. Make an int variable to hold the score.
-
+		int score="" ;
 		// 2. Set the size of the window in the initializeGui() method 
-
+ window.initializeGui(size);
 		// 4. Ask the user who this person is and store their answer
 		String guess = JOptionPane.showInputDialog("who is this?");
 
