@@ -1,9 +1,12 @@
-https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80package body_part_quiz;
+/*
+ * https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80package body_part_quiz;
+ */
 
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2019
  *    Level 1
  */
+package body_part_quiz;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -42,7 +45,7 @@ public class BodyPartQuiz {
 
 		// 3. Change the size of the window so that you can only see part of the
 		// image.
-		window.setSize(500, 500);
+		window.setSize(200, 150);
 
 		showNextImage();
 
@@ -51,20 +54,63 @@ public class BodyPartQuiz {
 	private void startQuiz() {
 
 		// 1. Make an int variable to hold the score.
-		int score="" ;
-		// 2. Set the size of the window in the initializeGui() method 
- window.initializeGui(size);
+		int score = 0;
+		// 2. Set the size of the window in the initializeGui() method
+
 		// 4. Ask the user who this person is and store their answer
-		String guess = JOptionPane.showInputDialog("who is this?");
+
 
 		// 5. Check their answer. If they guessed correctly:
 		// -- Tell them they are right and increase the score by 1
-
+	String guess = JOptionPane.showInputDialog("who is this?");	
+	if (guess.equals("Arnold")) {
+         JOptionPane.showMessageDialog(panel, "correct");
+          score=score+1;
+          showNextImage();
+		}else {
+			JOptionPane.showMessageDialog(panel, "incorrect");
+			JOptionPane.showMessageDialog(panel, "Arnold");
+			showNextImage();
+		}
+	JOptionPane.showMessageDialog(null, score);
+	String guess2 = JOptionPane.showInputDialog("who is this?");	
+	if (guess2.equals("Jack")) {
+         JOptionPane.showMessageDialog(panel, "correct");
+          score=score+1;
+          showNextImage();
+		}else {
+			JOptionPane.showMessageDialog(panel, "incorrect");
+			JOptionPane.showMessageDialog(panel, "Jack");
+			showNextImage();
+		}
+	JOptionPane.showMessageDialog(null, score);
+	String guess3 = JOptionPane.showInputDialog("who is this?");	
+	if (guess3.equals("Leonardo")) {
+         JOptionPane.showMessageDialog(panel, "correct");
+          score=score+1;
+          showNextImage();
+		}else {
+			JOptionPane.showMessageDialog(panel, "incorrect");
+			JOptionPane.showMessageDialog(panel, "Leonardo");
+			showNextImage();
+		}
+	JOptionPane.showMessageDialog(null, score);
+	String guess4 = JOptionPane.showInputDialog("who is this?");	
+	if (guess4.equals("Morgan")) {
+         JOptionPane.showMessageDialog(panel, "correct");
+          score=score+1;
+          showNextImage();
+		}else {
+			JOptionPane.showMessageDialog(panel, "incorrect");
+			JOptionPane.showMessageDialog(panel, "Morgan");
+			showNextImage();
+		}
+JOptionPane.showMessageDialog(null, score);
 		// 6. Otherwise:
 		// -- Tell them they are wrong and who the person is
 
 		// 7. Use the showNextImage() method below to get the next image
-		showNextImage();
+		
 
 		// 8. .... repeat 4-7 for all your images.....
 
