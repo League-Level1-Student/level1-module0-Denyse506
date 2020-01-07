@@ -52,19 +52,19 @@ String imageString = "src/drum_kit/drumline.png";
      panel.setLayout(new GridLayout());
 		// 12. call the pack() method on the frame. Run your program. Do you see
 		// your drum image?
-
+           frame.pack();
 		// 13. add this mouse listener to drumLabelWithImage
-
+         drumLabelWithImage.addMouseListener(this);
 		// 18. Add more images to make a drumkit. Remember to add this mouse
 		// listener to each one.
 
 	}
 
-	public void mouseClicked(MouseEvent e) {
+	
 		// 14. Print "mouse clicked" to the console. Run your program and watch
 		// the console to see when this is printed.
-
-		JLabel drumClicked = (JLabel) e.getSource(); // This line gets the label
+       
+		JLabel drumClicked = (JLabel) e.getSource("mouse clicked"); // This line gets the label
 														// that the mouse
 														// clicked on
 
@@ -77,7 +77,7 @@ String imageString = "src/drum_kit/drumline.png";
 		// 17. ...use the playSound method to play a drum sound. Test to see if
 		// it works
 
-	}
+	
 
 	private JLabel createLabelImage(String fileName) throws MalformedURLException {
 		URL imageURL = getClass().getResource(fileName);
