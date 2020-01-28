@@ -27,12 +27,13 @@ public class DrumKit implements MouseListener {
 		// 1. Make a JFrame variable and initialize it using "new JFrame()"
 JFrame frame= new JFrame();
 		// 2. Make the frame visible and
+frame.setVisible(true);
 		// set its default close operation to JFrame.EXIT_ON_CLOSE
 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// 3. Set the size of the frame
-frame.setSize(null);
+frame.setSize(400,400);
 		// 4. Set the title of the frame
-frame.setTitle(null);
+frame.setTitle("Drunk kit");
 		// 5. Make a JPanel variable and initialize it using "new JPanel().
 JPanel panel= new JPanel();
 
@@ -42,7 +43,7 @@ frame.add(panel);
 		// Eclipse project under "default package".
 
 		// 8. Put the name of your image file in a String variable.
-String imageString = "src/drum_kit/drumline.png";
+String imageString = "snare.jpg";
 		// 9. Edit the next line to use your String variable
 		drumLabelWithImage = createLabelImage(imageString);
 
@@ -59,23 +60,6 @@ String imageString = "src/drum_kit/drumline.png";
 		// listener to each one.
 
 	}
-
-	
-		// 14. Print "mouse clicked" to the console. Run your program and watch
-		// the console to see when this is printed.
-       
-		JLabel drumClicked = (JLabel) e.getSource("mouse clicked"); // This line gets the label
-														// that the mouse
-														// clicked on
-
-		// 15. Download a drum sound and drop it into your "default package".
-		// You can find it on freesound.org. To download it, log in as
-		// leagueofamazing/code4life.
-
-		// 16. If they clicked on the drumImage...
-
-		// 17. ...use the playSound method to play a drum sound. Test to see if
-		// it works
 
 	
 
@@ -99,6 +83,23 @@ String imageString = "src/drum_kit/drumline.png";
 	public void mousePressed(MouseEvent e) {
 		// TODO Auto-generated method stub
 
+		// 14. Print "mouse clicked" to the console. Run your program and watch
+		// the console to see when this is printed.
+       System.out.println("Click");
+		 // This line gets the label
+														// that the mouse
+														// clicked on
+
+		// 15. Download a drum sound and drop it into your "default package".
+		// You can find it on freesound.org. To download it, log in as
+		// leagueofamazing/code4life.
+
+		// 16. If they clicked on the drumImage...
+          
+		// 17. ...use the playSound method to play a drum sound. Test to see if
+		// it works
+         
+	  playSound("drum.wav");
 	}
 
 	@Override
@@ -117,6 +118,13 @@ String imageString = "src/drum_kit/drumline.png";
 	public void mouseExited(MouseEvent e) {
 		// TODO Auto-generated method stub
 
+	}
+
+
+	@Override
+	public void mouseClicked(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
